@@ -9,6 +9,7 @@ export class CdkTutorialStack extends cdk.Stack {
 
     const user = new User(this, "createFromCDK", {
       password: cdk.SecretValue.unsafePlainText("!23456789o"),
+      userName: 'cdk-sample-user'
     });
     user.addManagedPolicy({
       managedPolicyArn: "arn:aws:iam::aws:policy/AmazonSSMFullAccess",
